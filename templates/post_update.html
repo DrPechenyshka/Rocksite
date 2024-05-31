@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block tittle %} Editing posts {% endblock %} {%
+block body %}
+<div class="container">
+  <h1>Request update</h1>
+  <form method="post"
+    <input type="text" name="title" id="title" class="form-control" />
+    <br />
+    <textarea
+      name="intro"
+      id="intro"
+      class="form-control"
+      placeholder="Заголовок"
+    >
+{{articles.title}}</textarea
+    ><br />
+    <textarea
+      name="title"
+      id="title"
+      class="form-control"
+      placeholder="Ваше предложение, или проблема"
+    >
+{{articles.intro}}</textarea
+    ><br />
+    <textarea
+      name="text"
+      id="text"
+      class="form-control"
+      placeholder="Опишите как можно подробнее здесь!"
+    >
+{{articles.text}}</textarea
+    ><br />
+    <input type="submit" class="btn btn-success" value="Update" />
+  </form>
+</div>
+{% endblock %}
